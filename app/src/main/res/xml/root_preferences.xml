@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="Location">
+        <SwitchPreference
+            android:title="Auto-marker"
+            android:summaryOff="Will automatically marker your location"
+            android:summaryOn="Will not automatically marker your location"
+            android:key="marker"/>
+        <SwitchPreference
+            android:title="Auto-locate after starting"
+            android:summaryOn="Will not get location after app boot"
+            android:summaryOff="Will get location after app boot"
+            android:key="locate"/>
+        <SwitchPreference
+            android:title="Enable mock location"
+            android:summaryOff="Will get location for all apps (needs manual setup, go to Help)"
+            android:summaryOn="Will not get location for all apps"
+            android:key="mock"/>
+        <ListPreference
+            android:title="Auto-locate by interval"
+            android:summary="Will get your location by time interval (needs to enable auto-locate after starting)"
+            android:entries="@array/entries1"
+            android:defaultValue="1"
+            android:entryValues="@array/values1"
+            android:key="list_preference"/>
+
+
+
+
+
+
+    </PreferenceCategory>
+
+   <PreferenceCategory app:title="Scanning">
+        <!--<ListPreference
+            android:layout_width="wrap_content"
+            android:defaultValue="1"
+            android:entries="@array/entries"
+            android:entryValues="@array/values"
+            android:key="list_preference_1"
+            android:title="Type of scanning" />-->
+       <SwitchPreference
+           android:title="Wi-Fi scanning when locating"
+            android:key="scanning"
+           android:summaryOff="App will scan Wi-Fi itself"
+           android:summaryOn="App will not scan Wi-Fi itself"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Personalization">
+        <SwitchPreference
+            android:key="dark"
+            android:title="Dark mode (needs restart)"
+            android:summaryOff="Let's go on dark side"
+            android:summaryOn="Let's go on bright side"/>
+
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Troubleshooting">
+        <SwitchPreference
+            android:key="checklocation"
+            android:title="Forcefully turn off checking location"
+            android:summaryOff="If you think your location turned on, but app opens location settings, turn on this feature"
+            android:summaryOn="If app works normally, turn off this feature"/>
+    </PreferenceCategory>
+</PreferenceScreen>

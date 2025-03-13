@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:screenOrientation="portrait">
+
+
+
+        <include layout="@layout/maps_activity" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:elevation="6dp"
+            android:onClick="maps"
+            android:src="@drawable/ic_map"
+            android:layout_marginEnd="140dp"
+            app:layout_anchor="@+id/fab1"
+            android:layout_marginRight="140dp"
+            android:contentDescription="@string/open_in_maps" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="35dp"
+            android:layout_marginEnd="10dp"
+
+            android:onClick="doProcess"
+            android:src="@drawable/ic_my_location"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/get_location" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:onClick="newPoint"
+            android:src="@drawable/ic_add_location"
+            app:elevation="6dp"
+            android:layout_marginEnd="75dp"
+            app:layout_anchor="@+id/fab"
+
+            app:layout_anchorGravity="start|center"
+            app:pressedTranslationZ="12dp"
+            android:layout_marginRight="75dp"
+            android:contentDescription="@string/add_marker" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:textAlignment="center"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="@string/nope"
+            android:textSize="25sp"
+            android:layout_alignParentLeft="true" />
+
+        <!--<Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:onClick="maps"
+            android:text="Open in Google Maps" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
